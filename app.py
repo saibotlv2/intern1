@@ -12,7 +12,7 @@ from linebot.models import (
 )
 
 #from Creator import help, info, leave
-import command
+from command import input
 
 app = Flask(__name__)
 
