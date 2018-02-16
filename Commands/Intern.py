@@ -16,7 +16,7 @@ def intern_info(line_api, event, text):
                  "Company lists:\n\n"
         
         for i in range(len(company_data)):
-            result = result + str(i) + '. ' + company_data[i]["company"] + '\n'
+            result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
     
     else:
         for i in range(len(company_data)):
