@@ -29,6 +29,7 @@ def help(line_api, event):
     result = "Command lists:\n" \
              "- !intern list\n" \
              "- !tips {cv/interview}\n" \
+             "- !beasiswa\n" \
              "- !help\n" \
              "- !leave\n" \
              "- !info\n"
