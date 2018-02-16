@@ -7,7 +7,7 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
-    company = open("../intern_data.json", "r")
+    company = open("intern_data.json", "r")
     company_data = json.load(company)
 
     if text.lower() == 'list':
@@ -25,16 +25,16 @@ def intern_info(line_api, event, text):
                     result = result + company_data[i]["content"][j] + '\n'
                 result = result + '\n'
 
-                if text.lower() == 'bukalapak':
-                    with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
-                        data = json.loads(url.read().decode())
+        if text.lower() == 'bukalapak':
+            with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
+                data = json.loads(url.read().decode())
 
-                    for j in range(len(data)):
-                        for k in range(len(data[j]["list"])):
-                            if data[j]["list"][k]["type"] == "Internship":
-                                result = result + ('Category: ' + data[j]["category"] + '\n')
-                                result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
-                                result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
+            for j in range(len(data)):
+                for k in range(len(data[j]["list"])):
+                    if data[j]["list"][k]["type"] == "Internship":
+                        result = result + ('Category: ' + data[j]["category"] + '\n')
+                        result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
+                        result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
 
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
