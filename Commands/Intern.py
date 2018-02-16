@@ -8,7 +8,7 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
-    company = open("../intern_data.json", "r")
+    company = open("intern_data.json", "r")
     company_data = json.load(company)
 
     print(company_data)
