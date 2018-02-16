@@ -11,7 +11,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
-from Creator import help, info, leave
+#from Creator import help, info, leave
+import command
 
 app = Flask(__name__)
 
@@ -42,14 +43,18 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     text = event.message.text
-    if text == '!info':
-        info(line_bot_api, event)
-    elif text == '!help':
-        help(line_bot_api, event)
-    else:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=event.message.text))
+    input(line_bot_api, event, text)
+    # if text == '!info':
+    #     info(line_bot_api, event)
+    # elif text == '!help':
+    #     help(line_bot_api, event)
+    # elif text == '!leave':
+    #     leave(line_bot_api, event)
+    # else:
+    #     line_bot_api.reply_message(
+    #         event.reply_token,
+    #         TextSendMessage(text=event.message.text)
+    #     )
 
 
 if __name__ == "__main__":
