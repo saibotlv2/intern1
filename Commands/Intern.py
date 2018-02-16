@@ -11,7 +11,7 @@ def intern_info(line_api, event, text):
     company = open("intern_data.json", "r")
     company_data = json.load(company)
 
-    print(company_data)
+    # print(company_data)
 
     if text.lower() == 'list':
         result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
