@@ -15,6 +15,10 @@ def intern_info(line_api, event, text):
         result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
                  "contoh: !intern bukalapak\n\n"\
                  "Company lists:\n\n"
+
+        line_api.reply_message(
+            event.reply_token, TextSendMessage(text=result)
+        )
         
         for i in range(len(company_data)):
             result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
@@ -46,11 +50,11 @@ def intern_info(line_api, event, text):
 def intern_tips(line_api, event, text):
     result = ""
 
-    if text == 'cv':
+    if text.lower() == 'cv':
         result = "Guide: https://www.careercup.com/resume\n" \
                  "Advice (good to read): https://codeburst.io/competitive-programming-label-from-an-employers-perspective-5209d6843e2a\n" \
                  "Lumayan penting (terutama kalau ga ikut lomba/aktif di komunitas teknologi) : Side projects (project yang dikerjain sendiri, bukan dari tugas kuliah)"
-    elif text == 'interview':
+    elif text.lower() == 'interview':
         result = "Mayoritas ngetes kemampuan problem solving menggunakan ilmu dari materi algoritma dan struktur data\n" \
                  "Contoh soal: Implementasikan queue menggunakan 2 buah stack, dengan queue memiliki 2 method, yaitu enqueue dan dequeue\n" \
                  "Beberapa perusahaan ngetes hal lain juga, contoh: SQL, System Design, CSS, Common technologies (co: LAMP stack)\n" \
