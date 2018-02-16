@@ -4,8 +4,8 @@ from linebot.models import (
 
 # Showing info of the creator
 def info(line_api, event):
-    result = "This bot is created by\n" \
-             "Ahmad Fahmi Pratama.\n" \
+    result = "This bot is created by Ahmad Fahmi Pratama.\n" \
+             "Some of the contents are taken from my friend, Izzan, Cis, etc.\n" \
              "Visit my web at ahmadfahmi.me ! hehe"
     line_api.reply_message (
         event.reply_token, TextSendMessage(text=result)
@@ -27,9 +27,11 @@ def leave(line_api, event):
 # Help list
 def help(line_api, event):
     result = "Command lists:\n" \
-             "- !intern\n" \
+             "- !intern list\n" \
+             "- !tips {cv/interview}\n" \
              "- !help\n" \
-             "- !leave\n"
+             "- !leave\n" \
+             "- !info\n"
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
     )
