@@ -1,1 +1,1 @@
-__all__ = ["Creator", "Intern","Beasiswa"]
+__all__ = ["Creator", "Intern", "Beasiswa"]
