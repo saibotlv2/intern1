@@ -29,12 +29,12 @@ def intern_info(line_api, event, text):
                     with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
                         data = json.loads(url.read().decode())
 
-                    for i in range(len(data)):
-                        for j in range(len(data[i]["list"])):
-                            if data[i]["list"][j]["type"] == "Internship":
-                                result = result + ('Category: ' + data[i]["category"] + '\n')
-                                result = result + ('Role: ' + data[i]["list"][j]['title'] + '\n')
-                                result = result + ('url: ' + data[i]["list"][j]['url'] + '\n\n')
+                    for j in range(len(data)):
+                        for k in range(len(data[j]["list"])):
+                            if data[j]["list"][k]["type"] == "Internship":
+                                result = result + ('Category: ' + data[j]["category"] + '\n')
+                                result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
+                                result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
 
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
