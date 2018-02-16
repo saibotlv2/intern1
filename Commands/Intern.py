@@ -8,16 +8,16 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
-    with open('intern_data.json') as company:
-        company_data = json.load(company)
+    # with open('intern_data.json') as company:
+    #     company_data = json.load(company)
 
     if text.lower() == 'list':
         result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
                  "contoh: !intern bukalapak\n\n"\
                  "Company lists:\n\n"
         
-        for i in range(len(company_data)):
-            result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
+        # for i in range(len(company_data)):
+        #     result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
 
     elif text.lower() == 'bukalapak':
         with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
