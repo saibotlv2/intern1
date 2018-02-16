@@ -1,11 +1,10 @@
-from Commands import Creator, Intern, Beasiswa
+from Commands import Creator, Intern
 
 
 list_command = {
     "!info": Creator.info,
     "!exit": Creator.leave,
     "!help": Creator.help,
-    "!beasiswa": Beasiswa.bea_info,
     "!intern": Intern.intern_info,
     "!tips": Intern.intern_tips
 }
