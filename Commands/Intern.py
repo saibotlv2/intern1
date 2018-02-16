@@ -4,8 +4,45 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
 
+# Showing internship info
 def intern_info(line_api, event, text):
-    text = ""
+    result = ""
+
+    if text == 'list':
+        result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
+                 "contoh: !intern bukalapak\n\n"\
+                 "Company lists:\n"\
+                 "- bukalapak\n"\
+                 "- tokopedia\n"\
+                 "- kata.ai\n"\
+                 "- go-life\n"\
+
+    elif text == 'bukalapak':
+        result = "Internship / Full Time at Bukalapak\n\n"\
+                 "Durasi minimal 2,5 bulan\n"\
+                 "Link: https://careers.bukalapak.com/job-list \n"
+    elif text == 'tokopedia':
+        result = "Internship / Full Time at Tokopedia\n\n"\
+                 "Durasi minimal 2,5 bulan\n"\
+                 "Link: https://www.tokopedia.com/careers/jobs/ \n"
+    elif text == 'kata.ai':
+        result = "Internship at Kata.ai\n\n"\
+                 "Kirim cv ke jobs@kata.ai\n"\
+                 "cc: rizqi@kata.ai \n"
+    elif text == 'go-life':
+        result = "Internship / Full Time at GO-LIFE\n\n"\
+                 "Roles:\n"\
+                 "1. Product Engineer\n"\
+                 "2. UX Research\n\n"\
+                 "contact: adi.p@go-jek.com\n"
+    elif text == 'kata.ai':
+        result = "Kirim cv ke jobs@kata.ai\n"\
+                 "cc: rizqi@kata.ai \n"
+    
+    line_api.reply_message(
+        event.reply_token, TextSendMessage(text=result)
+    )
+
 
 # Showing internship tips
 def intern_tips(line_api, event, text):
