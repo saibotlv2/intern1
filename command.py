@@ -5,9 +5,9 @@ list_command = {
     "!info": Creator.info,
     "!exit": Creator.leave,
     "!help": Creator.help,
+    "!beasiswa": Beasiswa.bea_info,
     "!intern": Intern.intern_info,
-    "!tips": Intern.intern_tips,
-    "!beasiswa": Beasiswa.bea_info
+    "!tips": Intern.intern_tips
 }
 
 def input(line_api, event, text):
