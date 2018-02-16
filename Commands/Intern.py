@@ -38,6 +38,8 @@ def intern_info(line_api, event, text):
                         result = result + ('Category: ' + data[i]["category"] + '\n')
                         result = result + ('Role: ' + data[i]["list"][j]['title'] + '\n')
                         result = result + ('url: ' + data[i]["list"][j]['url'] + '\n\n')
+    
+    print(result)
 
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
