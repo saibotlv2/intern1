@@ -8,56 +8,38 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
-    # with open('intern_data.json') as company:
-    #     company_data = json.load(company)
+    company = open("intern_data.json", "r")
+    company_data = json.load(company)
 
     if text.lower() == 'list':
         result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
                  "contoh: !intern bukalapak\n\n"\
                  "Company lists:\n\n"
         
-        # for i in range(len(company_data)):
-        #     result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
-
-    elif text.lower() == 'bukalapak':
-        with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
-            data = json.loads(url.read().decode())
-
-        for j in range(len(data)):
-            for k in range(len(data[j]["list"])):
-                if data[j]["list"][k]["type"] == "Internship":
-                    result = result + ('Category: ' + data[j]["category"] + '\n')
-                    result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
-                    result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
+        for i in range(len(company_data)):
+            result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
     
+    else:
+        for i in range(len(company_data)):
+            if text.lower() == company_data[i]["company"]:
+                for j in range(len(company_data[i]["content"])):
+                    result = result + company_data[i]["content"][j] + '\n'
+                result = result + '\n'
+
+        if text.lower() == 'bukalapak':
+            with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
+                data = json.loads(url.read().decode())
+
+            for j in range(len(data)):
+                for k in range(len(data[j]["list"])):
+                    if data[j]["list"][k]["type"] == "Internship":
+                        result = result + ('Category: ' + data[j]["category"] + '\n')
+                        result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
+                        result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
+
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
     )
-        
-    #     for i in range(len(company_data)):
-    #         result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
-    
-    # else:
-    #     for i in range(len(company_data)):
-    #         if text.lower() == company_data[i]["company"]:
-    #             for j in range(len(company_data[i]["content"])):
-    #                 result = result + company_data[i]["content"][j] + '\n'
-    #             result = result + '\n'
-
-    #     if text.lower() == 'bukalapak':
-    #         with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
-    #             data = json.loads(url.read().decode())
-
-    #         for j in range(len(data)):
-    #             for k in range(len(data[j]["list"])):
-    #                 if data[j]["list"][k]["type"] == "Internship":
-    #                     result = result + ('Category: ' + data[j]["category"] + '\n')
-    #                     result = result + ('Role: ' + data[j]["list"][k]['title'] + '\n')
-    #                     result = result + ('url: ' + data[j]["list"][k]['url'] + '\n\n')
-
-    # line_api.reply_message(
-    #     event.reply_token, TextSendMessage(text=result)
-    # )
 
 
 # Showing internship tips
