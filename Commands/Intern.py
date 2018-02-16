@@ -4,6 +4,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
 
+
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
@@ -39,6 +40,7 @@ def intern_info(line_api, event, text):
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
     )
+
 
 # Showing internship tips
 def intern_tips(line_api, event, text):
