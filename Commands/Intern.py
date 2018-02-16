@@ -4,11 +4,14 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
 )
 
+
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
     company = open("../intern_data.json", "r")
     company_data = json.load(company)
+
+    print(company_data)
 
     if text.lower() == 'list':
         result = "Cara pakai: ketik {!intern<spasi>nama perusahaan}\n"\
@@ -39,6 +42,7 @@ def intern_info(line_api, event, text):
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
     )
+
 
 # Showing internship tips
 def intern_tips(line_api, event, text):
