@@ -1,4 +1,4 @@
-import json
+import json, urllib
 
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage
@@ -19,22 +19,34 @@ def intern_info(line_api, event, text):
 
     elif text == 'bukalapak':
         result = "Internship / Full Time at Bukalapak\n\n"\
-                 "Durasi minimal 2,5 bulan\n"\
-                 "Link: https://careers.bukalapak.com/job-list \n"
+                 "Durasi minimal 2,5 bulan\n\n"
+
+        with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
+            data_bl = json.loads(url.read().decode())
+
+        for i in range(len(data_bl)):
+            for j in range(len(data_bl[i]["list"])):
+                if data_bl[i]["list"][j]["type"] == "Internship":
+                    result = result + ('Role: ' + data_bl[i]["list"][j]['title'] + '\n')
+                    result = result + ('url: ' + data_bl[i]["list"][j]['url'] + '\n')
+
     elif text == 'tokopedia':
         result = "Internship / Full Time at Tokopedia\n\n"\
                  "Durasi minimal 2,5 bulan\n"\
                  "Link: https://www.tokopedia.com/careers/jobs/ \n"
+
     elif text == 'kata.ai':
         result = "Internship at Kata.ai\n\n"\
                  "Kirim cv ke jobs@kata.ai\n"\
                  "cc: rizqi@kata.ai \n"
+
     elif text == 'go-life':
         result = "Internship / Full Time at GO-LIFE\n\n"\
                  "Roles:\n"\
                  "1. Product Engineer\n"\
                  "2. UX Research\n\n"\
                  "contact: adi.p@go-jek.com\n"
+
     elif text == 'kata.ai':
         result = "Kirim cv ke jobs@kata.ai\n"\
                  "cc: rizqi@kata.ai \n"
