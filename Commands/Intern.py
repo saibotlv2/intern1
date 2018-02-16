@@ -16,8 +16,8 @@ def intern_info(line_api, event, text):
                  "contoh: !intern bukalapak\n\n"\
                  "Company lists:\n\n"
         
-        for i in range(len(company_data)):
-            result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
+        # for i in range(len(company_data)):
+        #     result = result + str(i+1) + '. ' + company_data[i]["company"] + '\n'
     
     else:
         for i in range(len(company_data)):
