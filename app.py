@@ -13,7 +13,7 @@ from linebot.models import (
 )
 
 # Import command.py, isinya modul keyword
-from command import resolve
+# from command import resolve
 
 
 app = Flask(__name__)
