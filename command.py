@@ -6,6 +6,7 @@ list_command = {
     "!exit": Creator.leave,
     "!help": Creator.help,
     "!beasiswa": Beasiswa.bea_info,
+    "!webcarikerja": Intern.intern_site,
     "!intern": Intern.intern_info,
     "!tips": Intern.intern_tips
 }
