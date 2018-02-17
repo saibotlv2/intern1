@@ -22,7 +22,7 @@ def intern_info(line_api, event, text):
             result = result + str(i) + '. ' + company_data[0]["list"][i]["company"] + '\n'
     
     else:
-        for i in range(len(company_data)):
+        for i in range(len(company_data[0]["list"])):
             if text.lower() == company_data[0]["list"][i]["company"]:
                 for j in range(len(company_data[0]["list"][i]["content"])):
                     result = result + company_data[0]["list"][i]["content"][j] + '\n'
