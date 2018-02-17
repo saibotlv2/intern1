@@ -1,4 +1,5 @@
 import json, urllib
+from bs4 import BeautifulSoup as bs
 
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, ImageMessage, ImageSendMessage
@@ -8,7 +9,6 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
-    image = ""
     company = open("intern_data.json", "r")
     company_data = json.load(company)
 
@@ -20,7 +20,7 @@ def intern_info(line_api, event, text):
                  "Company lists:\n\n"
         
         for i in range(len(company_data[0]["list"])):
-            result = result + str(i) + '. ' + company_data[0]["list"][i]["company"] + '\n'
+            result = result + str(i+1) + '. ' + company_data[0]["list"][i]["company"] + '\n'
     
     else:
         for i in range(len(company_data[0]["list"])):
@@ -28,8 +28,6 @@ def intern_info(line_api, event, text):
                 for j in range(len(company_data[0]["list"][i]["content"])):
                     result = result + company_data[0]["list"][i]["content"][j] + '\n'
                 result = result + '\n'
-                if len(company_data[0]["list"][i]) > 2:
-                    image = company_data[0]["list"][i]["image"]
 
         if text.lower() == 'bukalapak':
             with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
@@ -41,20 +39,19 @@ def intern_info(line_api, event, text):
                         result = result + ('Category: ' + data[i]["category"] + '\n')
                         result = result + ('Role: ' + data[i]["list"][j]['title'] + '\n')
                         result = result + ('url: ' + data[i]["list"][j]['url'] + '\n\n')
+        
+        elif text.lower() == 'tokopedia':
+            url = 'https://www.tokopedia.com/careers/function/internship/'
+            page = urllib.request.urlopen(url)
+            soup = bs(page, 'html.parser')
+            for title in soup.find_all('h4', attrs={'class': 'list-div__h4'}):
+                result = result + '- ' + title.text + '\n'
     
     print(result)
 
     line_api.reply_message(
         event.reply_token, TextSendMessage(text=result)
     )
-
-    if len(image) > 0:
-        line_api.reply_message(
-            event.reply_token, ImageSendMessage(
-                original_content_url=image,
-                preview_image_url=image
-            )
-        )
 
 
 # Showing job sites
