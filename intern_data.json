@@ -28,11 +28,11 @@
             {
                 "company": "go-life",
                 "content": [
-                    "Internship / Full Time at GO-LIFE\n\n",
-                    "Roles:\n",
-                    "1. Product Engineer\n",
-                    "2. UX Research\n\n",
-                    "contact: adi.p@go-jek.com\n"
+                    "Internship / Full Time at GO-LIFE\n",
+                    "Roles:",
+                    "1. Product Engineer",
+                    "2. UX Research\n",
+                    "contact: adi.p@go-jek.com"
                 ]
             },
             {
@@ -99,14 +99,14 @@
             {
                 "company": "shopee",
                 "content": [
-                    "Internship Program Shopee Singapore",
+                    "Internship Program Shopee Singapore\n",
                     "url: https://careers.shopee.com/jobs/?country_id=1&level=205&limit=20&offset=0"
                 ]
             },
             {
                 "company": "kmk-online",
                 "content": [
-                    "KMK Online Internship",
+                    "KMK Online Internship\n",
                     "Fullstack: https://www.kmkonline.co.id/careers/113-full-stack-engineer-internship-jakarta-indonesia",
                     "iOs Developer: https://www.kmkonline.co.id/careers/109-ios-engineer-internship-jakarta-indonesia"
                 ]
@@ -114,11 +114,37 @@
             {
                 "company": "sleekr",
                 "content": [
-                    "Sleekr Internship Program",
+                    "Sleekr Internship Program\n",
                     "Software Engineer: https://sleekr.recruiterbox.com/jobs/fk0fzq4/",
                     "Graphic Design: https://sleekr.recruiterbox.com/jobs/fk0f221/",
                     "HR & GA: https://sleekr.recruiterbox.com/jobs/fk0fx17/",
                     "IT Support: https://sleekr.recruiterbox.com/jobs/fk0f2jj/"
+                ]
+            },
+            {
+                "company": "kudo",
+                "content": [
+                    "Kudo Internship Program\n",
+                    "Roles:",
+                    "Mobile Engineer, Web Engineer, QA, Data Team, etc",
+                    "Send your latest CV to: careers@kudo.co.id"
+                ]
+            },
+            {
+                "company": "garena",
+                "content": [
+                    "Garena Internship Opportunity\n",
+                    "Role: Web Developer",
+                    "Skill needed:",
+                    "- General programming concept",
+                    "- Understanding of algorithm\n",
+                    "Preferred language: HTML, CSS, JS, PHP, MySQL\n",
+                    "Advantage:",
+                    "- UMR Salary",
+                    "- Lunch, dinner, snack, ice cream",
+                    "- Opportunity to be Associate Web Developer\n",
+                    "Send email to: adelinan@seagroup.com",
+                    "subject email: \"Webdev Internship Garena\""
                 ]
             }
         ]
