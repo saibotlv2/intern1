@@ -46,6 +46,22 @@ def intern_info(line_api, event, text):
     )
 
 
+# Showing job sites
+def intern_site(line_api, event):
+    result = ""
+    company = open("intern_data.json", "r")
+    company_data = json.load(company)
+
+    result = "Situs pencari lowongan kerja:\n\n"\
+
+    for i in range(len(company_data[1]["list"])):
+        result = result + str(i+1) + company_data[1]["list"][i] + '\n'
+    
+    line_api.reply_message(
+        event.reply_token, TextSendMessage(text=result)
+    )
+    
+
 # Showing internship tips
 def intern_tips(line_api, event, text):
     result = ""
