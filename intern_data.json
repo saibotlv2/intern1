@@ -5,14 +5,14 @@
             {
                 "company": "bukalapak",
                 "content": [
-                    "Internship / Full Time at Bukalapak",
+                    "Internship / Full Time at Bukalapak\n",
                     "Durasi minimal 2,5 bulan"
                 ]
             },
             {
                 "company": "tokopedia",
                 "content": [
-                    "Internship / Full Time at Tokopedia",
+                    "Internship / Full Time at Tokopedia\n",
                     "Durasi minimal 2,5 bulan",
                     "url: https://www.tokopedia.com/careers/jobs/"
                 ]
@@ -20,7 +20,7 @@
             {
                 "company": "kata.ai",
                 "content": [
-                    "Internship at Kata.ai",
+                    "Internship at Kata.ai\n",
                     "Kirim cv ke jobs@kata.ai",
                     "cc: rizqi@kata.ai"
                 ]
@@ -33,33 +33,34 @@
                     "1. Product Engineer",
                     "2. UX Research\n",
                     "contact: adi.p@go-jek.com"
-                ]
+                ],
+                "image": "go-life.jpg"
             },
             {
                 "company": "qlue",
                 "content": [
-                    "Internship at Qlue : Jakarta Smart City",
+                    "Internship at Qlue : Jakarta Smart City\n",
                     "url: bit.ly/qlueintern"
                 ]
             },
             {
                 "company": "google",
                 "content": [
-                    "Software Engineering Intern 2018 - Tokyo Japan",
+                    "Software Engineering Intern 2018 - Tokyo Japan\n",
                     "url: https://careers.google.com/jobs#!t=jo&jid=/google/software-engineering-intern-2018-tokyo-japan-3635170143&"
                 ]
             },
             {
                 "company": "qualcomm",
                 "content": [
-                    "Qualcomm Intern Software Engineering 2018",
+                    "Qualcomm Intern Software Engineering 2018\n",
                     "url: https://jobs.qualcomm.com/public/search.xhtml?action=keywords&fq=JOB_AREA%3A%22Engineering%3BSoftware%22%20AND%20REQ_TYPE%3A%22Intern%22"
                 ]
             },
             {
                 "company": "booz-allen",
                 "content": [
-                    "Booz Allen Hamilton Cyber Security Intern",
+                    "Booz Allen Hamilton Cyber Security Intern\n",
                     "Cybersecurity Intern",
                     "Key Role:",
                     "Employ expertise in a variety of technical fields, including system, computer, software, mechanical, mathematical, or scientific specialties. Apply basic engineering and design principles, theories, and concepts to job assignments, including the development of technical documentation and artefacts. Work under close management and mentorship involving problem–solving and following standardized practices and procedures. This position is located in Singapore.",
@@ -69,30 +70,31 @@
             {
                 "company": "pegipegi",
                 "content": [
-                    "Data Analyst",
-                    "Are you looking for a place to apply and improve your knowledge and skills? Then let's join our awesome team! As an Internship Data Analyst. Interested in this position?",
-                    "Jobs Responsibilities",
-                    "Data processing using Python and SQL",
-                    "Interpreting data and analyzing results",
-                    "Requirements",
-                    "Students major in in Computer Science / Information Technology / Mathematics field and other related major",
-                    "Have passion for data analysis",
-                    "Age between 20 – 23 years old",
-                    "Willing to have Internship minimum 3 months",
-                    "Willing to start immediately",
-                    "Willing to work full time on weekday ( 8.30 AM – 5 PM)",
-                    "Benefit",
-                    "We’ll give fee per day attendance",
-                    "Free parking",
-                    "Environment with young style, flexible, and supports your creativity",
+                    "Pegipegi Internship\n",
+                    "Role: Data Analyst",
+                    "Are you looking for a place to apply and improve your knowledge and skills? Then let's join our awesome team! As an Internship Data Analyst. Interested in this position?\n",
+                    "Jobs Responsibilities:",
+                    "- Data processing using Python and SQL",
+                    "- Interpreting data and analyzing results\n",
+                    "Requirements:",
+                    "- Students major in in Computer Science / Information Technology / Mathematics field and other related major",
+                    "- Have passion for data analysis",
+                    "- Age between 20 – 23 years old",
+                    "- Willing to have Internship minimum 3 months",
+                    "- Willing to start immediately",
+                    "- Willing to work full time on weekday ( 8.30 AM – 5 PM)\n",
+                    "Benefit:",
+                    "- We’ll give fee per day attendance",
+                    "- Free parking",
+                    "- Environment with young style, flexible, and supports your creativity\n",
                     "Let’s develop yourself with us",
-                    "Send your application to recruitment@pegipegi.com"
+                    "Send your application to: recruitment@pegipegi.com"
                 ]
             },
             {
                 "company": "ruangguru",
                 "content": [
-                    "Ruangguru Internship",
+                    "Ruangguru Internship\n",
                     "url: https://internship.ruangguru.com/roles/"
                 ]
             },
@@ -128,7 +130,8 @@
                     "Roles:",
                     "Mobile Engineer, Web Engineer, QA, Data Team, etc",
                     "Send your latest CV to: careers@kudo.co.id"
-                ]
+                ],
+                "image": "kudo.jpg"
             },
             {
                 "company": "garena",
@@ -145,7 +148,8 @@
                     "- Opportunity to be Associate Web Developer\n",
                     "Send email to: adelinan@seagroup.com",
                     "subject email: \"Webdev Internship Garena\""
-                ]
+                ],
+                "image": "garena.jpg"
             }
         ]
     },
