@@ -30,30 +30,54 @@
                 "content": [
                     "Internship / Full Time at GO-LIFE\n",
                     "Roles:",
-                    "1. Product Engineer",
-                    "2. UX Research\n",
+                    "- Product Engineer",
+                    "- UX Research\n",
                     "contact: adi.p@go-jek.com"
                 ],
-                "image": "go-life.jpg"
+                "image": "https://files.catbox.moe/a6we3d.jpg"
             },
             {
                 "company": "qlue",
                 "content": [
                     "Internship at Qlue : Jakarta Smart City\n",
-                    "url: bit.ly/qlueintern"
+                    "url: bit.ly/qlueintern\n",
+                    "OPEN VACANCIES :\n",
+                    "Product & Developer Division:",
+                    "- QA Analyst Intern",
+                    "- UI/UX Researcher Intern",
+                    "- Web Developer Intern",
+                    "- Front End Developer Intern",
+                    "- Back End Developer Intern",
+                    "- Business Process Analyst Intern\n",
+                    "Operation Division:",
+                    "- Finance & Account Intern\n",
+                    "Marketing Division:",
+                    "- Graphic Designer Intern",
+                    "- Videographer Intern",
+                    "- Social Media Admin Intern\n",
+                    "CLOSED Internship Program: ",
+                    "Marketing Division:",
+                    "- Campaigner Intern",
+                    "- Partnership Officer Intern",
+                    "- Data Analyst Intern",
+                    "- Market Research & Analyst Intern >> http://bit.ly/2x5QC3N"
                 ]
             },
             {
                 "company": "google",
                 "content": [
-                    "Software Engineering Intern 2018 - Tokyo Japan\n",
+                    "Google Internship 2018 - Tokyo Japan\n",
+                    "Role:",
+                    "- Software Engineering",
                     "url: https://careers.google.com/jobs#!t=jo&jid=/google/software-engineering-intern-2018-tokyo-japan-3635170143&"
                 ]
             },
             {
                 "company": "qualcomm",
                 "content": [
-                    "Qualcomm Intern Software Engineering 2018\n",
+                    "Qualcomm Internship 2018\n",
+                    "Role:",
+                    "- Software Engineering\n",
                     "url: https://jobs.qualcomm.com/public/search.xhtml?action=keywords&fq=JOB_AREA%3A%22Engineering%3BSoftware%22%20AND%20REQ_TYPE%3A%22Intern%22"
                 ]
             },
@@ -61,7 +85,8 @@
                 "company": "booz-allen",
                 "content": [
                     "Booz Allen Hamilton Cyber Security Intern\n",
-                    "Cybersecurity Intern",
+                    "Role:",
+                    "- Cybersecurity\n",
                     "Key Role:",
                     "Employ expertise in a variety of technical fields, including system, computer, software, mechanical, mathematical, or scientific specialties. Apply basic engineering and design principles, theories, and concepts to job assignments, including the development of technical documentation and artefacts. Work under close management and mentorship involving problem–solving and following standardized practices and procedures. This position is located in Singapore.",
                     "url: https://jobs.qualcomm.com/public/search.xhtml?action=keywords&fq=JOB_AREA%3A%22Engineering%3BSoftware%22%20AND%20REQ_TYPE%3A%22Intern%22"
@@ -71,7 +96,8 @@
                 "company": "pegipegi",
                 "content": [
                     "Pegipegi Internship\n",
-                    "Role: Data Analyst",
+                    "Role:",
+                    "- Data Analyst\n",
                     "Are you looking for a place to apply and improve your knowledge and skills? Then let's join our awesome team! As an Internship Data Analyst. Interested in this position?\n",
                     "Jobs Responsibilities:",
                     "- Data processing using Python and SQL",
@@ -131,7 +157,7 @@
                     "Mobile Engineer, Web Engineer, QA, Data Team, etc",
                     "Send your latest CV to: careers@kudo.co.id"
                 ],
-                "image": "kudo.jpg"
+                "image": "https://files.catbox.moe/59ddm1.jpg"
             },
             {
                 "company": "garena",
@@ -149,7 +175,7 @@
                     "Send email to: adelinan@seagroup.com",
                     "subject email: \"Webdev Internship Garena\""
                 ],
-                "image": "garena.jpg"
+                "image": "https://files.catbox.moe/rm0dy3.jpg"
             }
         ]
     },
