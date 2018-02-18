@@ -30,7 +30,7 @@ def intern_info(line_api, event, text):
                 for j in range(len(company_data[0]["list"][i]["content"])):
                     result = result + company_data[0]["list"][i]["content"][j] + '\n'
                 result = result + '\n'
-                if len(company_data[0]["list"][i] > 2):
+                if len(company_data[0]["list"][i]) > 2:
                     image = company_data[0]["list"][i]["image"]
 
         if text.lower() == 'bukalapak':
