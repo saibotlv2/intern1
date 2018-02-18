@@ -59,11 +59,12 @@ def intern_info(line_api, event, text):
         )
     else:
         line_api.reply_message(
-            event.reply_token, TextSendMessage(text=result),
+            event.reply_token, 
+            [TextSendMessage(text=result),
             ImageSendMessage(
                 original_content_url=image,
                 preview_image_url=image
-            )
+            )]
         )
 
 
