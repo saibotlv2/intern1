@@ -9,9 +9,11 @@ from linebot.models import (
 # Showing internship info
 def intern_info(line_api, event, text):
     result = ""
+    image = ""
     company = open("intern_data.json", "r")
     company_data = json.load(company)
 
+    # for debug purposes
     print(company_data)
 
     if text.lower() == 'list':
@@ -28,6 +30,8 @@ def intern_info(line_api, event, text):
                 for j in range(len(company_data[0]["list"][i]["content"])):
                     result = result + company_data[0]["list"][i]["content"][j] + '\n'
                 result = result + '\n'
+                if len(company_data[0]["list"][i] > 2):
+                    image = company_data[0]["list"][i]["image"]
 
         if text.lower() == 'bukalapak':
             with urllib.request.urlopen("https://careers.bukalapak.com/jobs") as url:
@@ -49,9 +53,18 @@ def intern_info(line_api, event, text):
     
     print(result)
 
-    line_api.reply_message(
-        event.reply_token, TextSendMessage(text=result)
-    )
+    if len(image) == 0:
+        line_api.reply_message(
+            event.reply_token, TextSendMessage(text=result)
+        )
+    else:
+        line_api.reply_message(
+            event.reply_token, TextSendMessage(text=result),
+            ImageSendMessage(
+                original_content_url=image,
+                preview_image_url=image
+            )
+        )
 
 
 # Showing job sites
