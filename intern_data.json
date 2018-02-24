@@ -176,6 +176,14 @@
                     "subject email: \"Webdev Internship Garena\""
                 ],
                 "image": "https://files.catbox.moe/rm0dy3.jpg"
+            },
+            {
+                "company": "suitmedia",
+                "content": [
+                    "Suitmedia Internship Program\n",
+                    "url: https://suitmedia.com/careers",
+                    "Role list:\n"
+                ]
             }
         ]
     },
