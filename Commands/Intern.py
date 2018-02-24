@@ -50,6 +50,14 @@ def intern_info(line_api, event, text):
             soup = bs(page, 'html.parser')
             for title in soup.find_all('h4', attrs={'class': 'list-div__h4'}):
                 result = result + '- ' + title.text + '\n'
+        
+        elif text.lower() == 'suitmedia':
+            url = 'https://suitmedia.com/careers'
+            page = urllib.request.urlopen(url)
+            soup = bs(page, 'html.parser')
+            for title in soup.find_all('a', attrs={'class': 'detail-job-trigger'}):
+                if 'intern' in (title.text.lstrip(' ')).lower():
+                    result = result + '- ' + title.text.lstrip('\n').lstrip(' ')
     
     print(result)
 
@@ -60,11 +68,10 @@ def intern_info(line_api, event, text):
     else:
         line_api.reply_message(
             event.reply_token, 
-            [TextSendMessage(text=result),
-            ImageSendMessage(
-                original_content_url=image,
-                preview_image_url=image
-            )]
+            [
+            TextSendMessage(text=result),
+            ImageSendMessage(original_content_url=image, preview_image_url=image)
+            ]
         )
 
 
