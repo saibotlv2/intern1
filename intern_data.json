@@ -1,7 +1,18 @@
 [
     {
         "type": "company",    
-        "list": [    
+        "list": [  
+            {
+                "company": "traveloka",
+                "image": "https://files.catbox.moe/axli0u.jpg"
+            },
+            {
+                "company": "gojek",
+                "content": [
+                    "Internship / Full Time at GO-JEK\n",
+                    "Langsung sikat gan: https://www.go-jek.com/careers/detail/?job=81244"
+                ]
+            },  
             {
                 "company": "bukalapak",
                 "content": [
@@ -69,7 +80,11 @@
                     "Google Internship 2018 - Tokyo Japan\n",
                     "Role:",
                     "- Software Engineering",
-                    "url: https://careers.google.com/jobs#!t=jo&jid=/google/software-engineering-intern-2018-tokyo-japan-3635170143&"
+                    "url: https://careers.google.com/jobs#!t=jo&jid=/google/software-engineering-intern-2018-tokyo-japan-3635170143& \n",
+                    "Google Internship 2018 - Sydney Australia\n",
+                    "Role:",
+                    "- Software Engineering",
+                    "url: https://careers.google.com/jobs?src=Online/Uncategorized/googlejobsalerts&utm_source=googlejobs&utm_medium=email&utm_content=Software+Engineering+Intern,+Summer+2018&utm_campaign=jobalerts#!t=jo&jid=3713210580 \n"
                 ]
             },
             {
