@@ -111,6 +111,13 @@ def intern_tips(line_api, event, text):
                  " - CS Academy - https://csacademy.com/ \n" \
                  " - Leetcode - https://leetcode.com/ \n" \
                  " - Kuliah"
+    elif text == 'materi':
+        result = "Recommended books to read (so far, IMO, CMIIW):\n"\
+                 "- Clean Code - A Handbook of Agile Software Craftsmanship\n"\
+                 "- Cracking the Coding Interview, 6th Edition 189 Programming Questions and Solutions\n"\
+                 "- The Algorithm Design Manual by Steven S. Skiena\n"\
+                 "- The Google Resume\n"
+
 
     
     line_api.reply_message(
